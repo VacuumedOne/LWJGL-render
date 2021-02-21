@@ -1,0 +1,74 @@
+import org.gradle.internal.os.OperatingSystem
+
+plugins {
+    id 'java-library'
+    id 'idea'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // LWJGL3
+    project.ext.lwjglVersion = '3.2.3'
+    switch (OperatingSystem.current()) {
+        case OperatingSystem.LINUX:
+            project.ext.lwjglNatives = 'natives-linux'
+            break
+        case OperatingSystem.MAC_OS:
+            project.ext.lwjglNatives = 'natives-macos'
+            break
+        case OperatingSystem.WINDOWS:
+            project.ext.lwjglNatives = 'natives-windows'
+            break
+    }
+    implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    implementation "org.lwjgl:lwjgl"
+    implementation "org.lwjgl:lwjgl-egl"
+    implementation "org.lwjgl:lwjgl-glfw"
+    implementation "org.lwjgl:lwjgl-opengl"
+    implementation "org.lwjgl:lwjgl-opengles"
+    implementation "org.lwjgl:lwjgl-stb"
+    runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengles::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+
+    // jMonkey Engine
+//    implementation "org.jmonkeyengine:jme3-core:[3.1,)"
+
+    // JUnit5
+    testImplementation platform('org.junit:junit-bom:5.7.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.7.0'
+
+    implementation "org.jmonkeyengine:jme3-core:3.3.2-stable"
+    implementation "org.jmonkeyengine:jme3-plugins:3.3.2-stable"
+    implementation "org.jmonkeyengine:jme3-desktop:3.3.2-stable"
+    implementation "org.jmonkeyengine:jme3-lwjgl:3.3.2-stable"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}

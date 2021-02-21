@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="oz.common.scene.QuadTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-18T18:18:13" hostname="nockson" time="0.022">
+  <properties/>
+  <testcase name="quadTest()" classname="oz.common.scene.QuadTest" time="0.022"/>
+  <system-out><![CDATA[current /home/nocks_on/project/research/OZ2/common
+current /home/nocks_on/project/research/OZ2
+/home/nocks_on/project/research/OZ2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

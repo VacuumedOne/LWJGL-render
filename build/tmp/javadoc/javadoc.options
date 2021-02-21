@@ -1,0 +1,8 @@
+-classpath '/home/nocks_on/Downloads/gradle-java-2/common/build/classes/java/main:/home/nocks_on/Downloads/gradle-java-2/common/build/resources/main:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-egl/3.2.3/45ad689a4346fac69d4e8696fa02aaa98f0ea196/lwjgl-egl-3.2.3.jar:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.2.3/5e520d5c290c8b012545a8d34fa5db5ab051ea53/lwjgl-glfw-3.2.3.jar:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.2.3/bdd534a323d0c8f54969b95e424b6ac8984f7d6e/lwjgl-opengl-3.2.3.jar:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengles/3.2.3/77a9ef18a071cb0219bcfa8c9199cee935d0c974/lwjgl-opengles-3.2.3.jar:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.2.3/40eccaa4fa86fc815f2e17946a392fb5fdcc286a/lwjgl-stb-3.2.3.jar:/home/nocks_on/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.2.3/17a59ba0fe8d474ec9dbe0d5db40d2cfe59c4c08/lwjgl-3.2.3.jar'
+-d '/home/nocks_on/Downloads/gradle-java-2/common/build/docs/javadoc'
+-doctitle 'common API'
+-notimestamp 
+-quiet 
+-windowtitle 'common API'
+'/home/nocks_on/Downloads/gradle-java-2/common/src/graphics/EGLInitializer.java'
+'/home/nocks_on/Downloads/gradle-java-2/common/src/util/MessageUtils.java'
